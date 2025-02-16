@@ -37,7 +37,7 @@ def message(msg, color):
     mesg = font_style.render(msg, True, color)
     screen.blit(mesg, [width / 6, height / 3])
 
-def game_loop():
+def gameLoop():
     game_over = False
     game_close = False
 
@@ -67,7 +67,7 @@ def game_loop():
                         game_over = True
                         game_close = False
                     if event.key == pygame.K_c:
-                        game_loop()
+                        gameLoop()
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -119,4 +119,4 @@ def game_loop():
     pygame.quit()
     quit()
 
-game_loop()
+gameLoop()
